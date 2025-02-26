@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Đơn Giản</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial';
+            background:linear-gradient(to right, #d9d9d9, #f8c6d8);
+            color: pink;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            background: #f4a4c1;;
+            color: white;
+            padding: 30px 0;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav {
+            background-color: #777;
+            padding: 10px 0;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out, transform 0.3s;
+            display: inline-block;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: gray;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: grey;
+        }
+        .section p {
+            font-size: 16px;
+            color: grey;
+            line-height: 1.8;
+        }
+         .back-home {
+            display: block;
+            margin-top: 10px;
+            background-color: grey;
+            color: pink;
+            padding: 6px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-align: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .back-home:hover {
+            background-color: grey;
+        }
+        footer {
+            background-color: grey;
+            color: #fff;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 30px;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+        }
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            text-decoration: underline;
+            color: #e67e22;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        BÀI TẬP WEB
+    </header>
+    
+    <nav>
+        <a href="#" onclick="toggleContent('buoi1')">Buổi 1</a>
+        <a href="#" onclick="toggleContent('buoi2')">Buổi 2</a>
+        <a href="#">Buổi 3</a>
+        <a href="#">Buổi 4</a>
+    </nav>
+   
+    <div id="buoi1" class="container hidden">
+        <h2>Nội dung Buổi 1</h2>
+        <p>Danh sách các bài tập của Buổi 1:</p>
+        <ul class="exercise-list">
+            <li><a href="baitap1.html.html">Bài 1</a></li>
+            <li><a href="baitap21.html.html">Bài 2.1</a></li>
+            <li><a href="baitap22.html.html">Bài 2.2</a></li>
+            <li><a href="baitap23.html.html">Bài 2.3</a></li>
+            <li><a href="baitap3.html.html">Bài 3</a></li>
+            <li><a href="baitap4.html.html">Bài 4</a></li>
+        </ul>
+        <a href="imdex.html.html">Quay về trang chủ</a>
+    </div>
+
+    
+   
+    <div id="buoi2" class="container hidden">
+        <h2>Nội dung Buổi 2</h2>
+        <p>Danh sách các bài tập của Buổi 2:</p>
+        <ul class="exercise-list">
+            <li><a href="Testlab1.html">Bài 1</a></li>   
+            <li><a href="bai2.1.html">Bài 2.1</a></li>
+            <li><a href="bai2.2.html">Bài 2.2</a></li>
+            <li><a href="bai2.3.html">Bài 2.3</a></li>
+            <li><a href="bai3.html">Bài 3</a></li>
+        </ul>
+        <a href="imdex.html.html">Quay về trang chủ</a>
+    </div>
+    
+    <footer>
+        Bài Tập Web | <a href="https://www.facebook.com/linh0nguu">Khanhlinh</a>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
