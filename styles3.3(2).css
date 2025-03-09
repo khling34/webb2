@@ -1,0 +1,16 @@
+.image-container {
+  display: flex;
+  gap: 50px;
+}
+
+.image-container img {
+  width: 200px;
+  height: auto;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.image-container img:hover {
+  opacity: 1;
+}
