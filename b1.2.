@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 năm nhìn lại Windows 1.0: Thất bại tạo nên thành công cho hệ điều hành phổ biến nhất ngày nay</title>
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+         }
+         .mautren {
+            background-color: black;
+         }
+        .article-container {
+            width: 90%;
+            max-width: 1000px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+            .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .cantrai {
+            text-align: left;
+        }
+        .image-container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    </style> 
+</head>
+<body>
+    <div class="article-container">
+        <div class="mautren">
+            <div class="cantrai">
+        <img src="https://static.mediacdn.vn/genk/web_images/logogenk.svg" alt="https://genk.vn/">
+            </div>
+            <div class="navbar">
+                <a href="#">MOBILE</a>
+                <a href="#">TIN ICT</a>
+                <a href="#">INTERNET</a>
+                <a href="#">KHÁM PHÁ</a>
+                <a href="#">XEM-MUA-LUÔN</a>
+                <a href="#">XE</a>
+                <a href="#">APPS-GAME</a>
+                <a href="#">ĐỒ CHƠI SỐ</a>
+            </div>
+            <hr>
+        </div>
+        <hr>
+        <div class="cantrai">
+            <p style="color: gray;">TRANG CHỦ > TRÀ ĐÁ CÔNG NGHỆ</p>
+            <h1>40 năm nhìn lại Windows 1.0: Thất bại tạo nên thành công cho hệ điều hành phổ biến nhất ngày nay</h1>
+            <p style=" color: red;">TUẤN NGUYỄN,</p>
+            <p style=" color: gray;">1 NĂM TRƯỚC</p>
+            <hr>
+            <h2>Tính đến nay, Windows 1.0 đã gần 40 năm tuổi và nó đã giúp ích rất nhiều cho Microsoft trong công cuộc chinh phục thị trường hệ điều hành máy tính.</h2>
+            <div class="navbar">
+            <ul>
+                <li><a href="https://genk.vn/the-gioi-di-dong-can-nhac-dong-200-cua-hang-chu-tich-nguyen-duc-tai-tung-co-quan-diem-ve-van-de-nay-ra-sao-vao-7-thang-truoc-20231125084209823.chn" style=" color: gray;">Thế giới di động cân nhắc đóng 200 cửa hàng, Chủ tịch Nguyễn Đức Tài từng có quan điểm về vấn đề này ra sao vào 7 tháng trước? </a></li>
+                <li><a href="https://genk.vn/thi-truong-giao-do-an-tai-viet-nam-khoc-liet-den-muc-nao-ma-beamin-phai-ngam-ngui-rut-lui-20231125080210261.chn" style=" color: gray;">Thị trường giao đồ ăn tại Việt Nam khốc liệt đến mức nào mà BEAMIN phải ngậm ngùi rút lui?</a></li>
+                <li><a href="https://genk.vn/trong-khi-huawei-xiaomi-gap-rut-lam-xe-o-to-dien-apple-tho-o-icar-van-chi-la-tin-don-20231124155832718.chn" style=" color: gray;">Trong khi Huawei, Xiaomi gấp rút làm xe ô tô điện, Apple thờ ơ, iCar vẫn chỉ là tin đồn </a></li>
+                <li><a href="https://genk.vn/baemin-tuyen-bo-roi-khoi-viet-nam-khien-dan-tinh-tiec-nuoi-vi-mat-di-mot-ung-dung-giao-do-an-quen-thuoc-20231124155508883.chn" style=" color: gray;">BAEMIN tuyên bố rời khỏi Việt Nam khiến dân tình tiếc nuối vì mất đi một ứng dụng giao đồ ăn quen thuộc </a></li>
+            </ul>
+            </div>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/anh-cover-1-1700880668257-1700880669711755893484.jpg" style="width:900px;height:600x;">
+            </div>
+            <br>
+            <p>Microsoft ra mắt Windows 1.0 vào tháng 11 năm 1983. Windows 1.0 đánh dấu sự bắt đầu cho thương hiệu Windows vẫn thống trị thị trường hệ điều hành máy tính ngày nay. Chúng ta hãy cùng nhìn lại sự ra mắt mang tính lịch sử của Microsoft Windows 1.0 sau 40 năm.</p>
+            <h2>Apple Lisa: Phát súng bắt đầu cuộc đua thay đổi hệ điều hành máy tính</h2>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880671623164687037.jpg" style="width:900px;height:600x;" >
+            </div>
+            <p>Steve Jobs bên cạnh chiếc Apple Lisa</p>
+            <p>Vào đầu những năm 1980, hệ điều hành máy tính không hề giống với những gì chúng ta biết hiện nay. Chúng hoạt động dựa trên các dòng lệnh, sử dụng thông qua cách nhập lệnh văn bản. Tuy nhiên, một cuộc cách mạng GUI (giao diện đồ họa người dùng) đang diễn ra trong ngành công nghệ. Apple đã tự đặt mình vào vị trí dẫn đầu trong cuộc cách mạng đó khi cho ra mắt Lisa vào đầu năm 1983. Đó là một trong những chiếc PC đầu tiên có giao diện người dùng đồ họa, cho phép người dùng mở các chương trình và tập tin bằng chuột.</p>
+            <p>Tuy nhiên, vấn đề với Apple Lisa là nó quá cao cấp. Đó là chiếc máy tính đi trước thời đại với thông số kỹ thuật rất cao đối với một chiếc PC đầu những năm 1980. Điều này khiến Lisa trở nên cực kỳ đắt đỏ, với giá khởi điểm xấp xỉ 10.000 USD. Hầu hết người dùng sẽ chọn PC IBM rẻ hơn.</p>
+            <h2>Microsoft ra mắt Windows 1.0 tại COMDEX</h2>
+            <p>Tuy nhiên, Lisa vẫn khiến nhiều người trong ngành công nghệ phải chú ý nhờ hệ điều hành giao diện đồ họa mang tính cách mạng (tiền thân của Macintosh). Để đáp lại Lisa, Microsoft đã bắt đầu dự án hệ điều hành GUI có tên mã là Interface Manager (Trình quản lý giao diện). Bill Gates công bố Windows 1.0 tại khách sạn Plaza ở New York vào ngày 10 tháng 11 năm 1983.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880673217889914177.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Bill Gates công bố dự án hệ điều hành mới</p>
+            <p>Khi Microsoft công bố Windows 1.0, công ty cho biết đây là phần mở rộng của MS-DOS. Microsoft kỳ vọng Windows 1.0 sẽ mở rộng môi trường phát triển phần mềm MS-DOS bằng cách cho phép các nhà phát triển tạo ra nhiều chương trình có điều hướng đồ họa hơn. Do đó, hệ điều hành Windows đầu tiên chỉ giống như một bổ sung cho MS-DOS hơn là một sự thay thế.</p>
+            <p>Microsoft đã trình diễn bản preview Windows 1.0 đầu tiên tại COMDEX (triển lãm thương mại máy tính) vào tháng 11 năm 1983. Thế giới lần đầu tiên nhìn thấy hệ điều hành Windows trên màn hình màu xanh lá cách đây 40 năm. Nền tảng Windows đầu tiên cho phép người dùng truy cập nhiều chương trình đang chạy bằng cách nhấp vào biểu tượng của chúng.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806748721155972762.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Giao diện Windows 1.01</p>
+            <p>Windows 1.0 cũng đi kèm với một số ứng dụng mà người dùng ngày nay đã quen thuộc. Notepad, Paint và Calc (Máy tính) là ba chương trình đi kèm với Windows 1.0 và vẫn là một phần của dòng hệ điều hành Windows kể từ đó. Người dùng cũng có thể chọn các chương trình Write (trình xử lý văn bản), Đồng hồ, Reversi (trò chơi), Clipboard và Lịch từ MS-DOS Executive.</p>
+            <p>Ngày nay, bạn có thể xem Windows 1.0 trông như thế nào trên trang giả lập PC IBM này.</p>
+            <h2>Cuộc cách mạng Windows thật sự bắt đầu vào năm 1995</h2>
+            <p>Microsoft đã trì hoãn việc phát hành Windows 1.0 nhằm thực hiện một số sửa đổi và cải tiến bổ sung. Lịch sử của Windows bắt đầu khi phiên bản Windows 1.0 chính thức đầu tiên xuất hiện vào tháng 11 năm 1985, hai năm sau khi Microsoft công bố nó. Microsoft ra mắt Windows 1.0 tại Mỹ với mức giá phải chăng là 99 USD.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806767101268580880.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Bill Gates cầm những chiếc đĩa mềm Windows 1.0</p>
+            <p>Tuy nhiên, đáng tiếc là người dùng thực sự không ấn tượng bởi Windows 1.0. Hệ điều hành Windows đầu tiên có một số vấn đề về hiệu suất và khả năng tương thích phần mềm. Nhiều đánh giá thời đó nhận xét Windows 1.0 là một sự thất bại. Cuối cùng, hầu hết người dùng thích gắn bó với các lệnh MS-DOS trong suốt những năm còn lại của thập niên 1980.</p>
+            <p>PC của những năm 1980 chưa hoàn toàn sẵn sàng cho hệ điều hành GUI. Hệ điều hành đồ họa yêu cầu sức mạnh nặng nề hơn khiến phần cứng hạn chế của hầu hết PC thời điểm đó gặp vấn đề hiệu năng. Phần cứng PC cần khoảng 7 đến 10 năm để phát triển trước khi cuộc cách mạng Windows thực sự bắt đầu vào năm 1995.</p>
+            <p>Windows cuối cùng đã đạt được thành công lớn vào năm 1995. Việc thêm menu Start và thanh tác vụ vào Windows 95 đã tạo nên sự khác biệt, có thể nói Windows 95 chính là phiên bản đã giúp định hình Windows mà chúng ta biết ngày nay. PC vào giữa những năm 1990 cũng được trang bị tốt hơn nhiều để xử lý nền tảng GUI. Sau đó, dòng hệ điều hành Windows đã thống trị thị trường máy tính để bàn và MS-DOS dần biến mất.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880678825818101052.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Windows 95 mang đến những tính năng cốt lõi được sử dụng đến ngày nay</p>
+            <p>Ngày nay, khó có thể tưởng tượng một hệ điều hành thiếu những yếu tố của Windows 95, ở một mức độ nào đó, chúng ta có thể thấy chúng ngay cả trên các nền tảng cạnh tranh như các bản phân phối dựa trên Linux, macOS và thậm chí cả Android.</p>
+            <h2>Windows đã chiến thắng trong cuộc chiến hệ điều hành đồ họa</h2>
+            <p>Tuy Windows 95 là phiên bản thật sự tạo nên thành công, nhưng sự ra mắt của Windows 1.0 vào tháng 11 năm 1983 chắc chắn là khởi đầu, tạo nền tảng cho những hệ điều hành tốt hơn mà sau này Microsoft mang đến cho PC, giúp chúng trở thành những cỗ máy dễ tiếp cận hơn nhiều.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806805711571495043.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Những đĩa mềm Windows 1.0 đầu tiên có chữ ký của Bill Gates</p>
+            <p>Bill Gates từng tuyên bố Windows là tương lai khi Microsoft trình làng Windows 1.0, hệ điều hành đồ họa đầu tiên của mình và lời tiên tri đó đã trở thành sự thật.</p>
+        </div>
+        <div style="text-align: right;">
+        <a href="javascript:;" style="text-align:end">Theo nhịp sống thị trường</a>
+        </div>
+        <a href="(1)index.html">Quay về trang chủ</a>
+        </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 năm nhìn lại Windows 1.0: Thất bại tạo nên thành công cho hệ điều hành phổ biến nhất ngày nay</title>
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+         }
+         .mautren {
+            background-color: black;
+         }
+        .article-container {
+            width: 90%;
+            max-width: 1000px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+            .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .cantrai {
+            text-align: left;
+        }
+        .image-container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    </style> 
+</head>
+<body>
+    <div class="article-container">
+        <div class="mautren">
+            <div class="cantrai">
+        <img src="https://static.mediacdn.vn/genk/web_images/logogenk.svg" alt="https://genk.vn/">
+            </div>
+            <div class="navbar">
+                <a href="#">MOBILE</a>
+                <a href="#">TIN ICT</a>
+                <a href="#">INTERNET</a>
+                <a href="#">KHÁM PHÁ</a>
+                <a href="#">XEM-MUA-LUÔN</a>
+                <a href="#">XE</a>
+                <a href="#">APPS-GAME</a>
+                <a href="#">ĐỒ CHƠI SỐ</a>
+            </div>
+            <hr>
+        </div>
+        <hr>
+        <div class="cantrai">
+            <p style="color: gray;">TRANG CHỦ > TRÀ ĐÁ CÔNG NGHỆ</p>
+            <h1>40 năm nhìn lại Windows 1.0: Thất bại tạo nên thành công cho hệ điều hành phổ biến nhất ngày nay</h1>
+            <p style=" color: red;">TUẤN NGUYỄN,</p>
+            <p style=" color: gray;">1 NĂM TRƯỚC</p>
+            <hr>
+            <h2>Tính đến nay, Windows 1.0 đã gần 40 năm tuổi và nó đã giúp ích rất nhiều cho Microsoft trong công cuộc chinh phục thị trường hệ điều hành máy tính.</h2>
+            <div class="navbar">
+            <ul>
+                <li><a href="https://genk.vn/the-gioi-di-dong-can-nhac-dong-200-cua-hang-chu-tich-nguyen-duc-tai-tung-co-quan-diem-ve-van-de-nay-ra-sao-vao-7-thang-truoc-20231125084209823.chn" style=" color: gray;">Thế giới di động cân nhắc đóng 200 cửa hàng, Chủ tịch Nguyễn Đức Tài từng có quan điểm về vấn đề này ra sao vào 7 tháng trước? </a></li>
+                <li><a href="https://genk.vn/thi-truong-giao-do-an-tai-viet-nam-khoc-liet-den-muc-nao-ma-beamin-phai-ngam-ngui-rut-lui-20231125080210261.chn" style=" color: gray;">Thị trường giao đồ ăn tại Việt Nam khốc liệt đến mức nào mà BEAMIN phải ngậm ngùi rút lui?</a></li>
+                <li><a href="https://genk.vn/trong-khi-huawei-xiaomi-gap-rut-lam-xe-o-to-dien-apple-tho-o-icar-van-chi-la-tin-don-20231124155832718.chn" style=" color: gray;">Trong khi Huawei, Xiaomi gấp rút làm xe ô tô điện, Apple thờ ơ, iCar vẫn chỉ là tin đồn </a></li>
+                <li><a href="https://genk.vn/baemin-tuyen-bo-roi-khoi-viet-nam-khien-dan-tinh-tiec-nuoi-vi-mat-di-mot-ung-dung-giao-do-an-quen-thuoc-20231124155508883.chn" style=" color: gray;">BAEMIN tuyên bố rời khỏi Việt Nam khiến dân tình tiếc nuối vì mất đi một ứng dụng giao đồ ăn quen thuộc </a></li>
+            </ul>
+            </div>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/anh-cover-1-1700880668257-1700880669711755893484.jpg" style="width:900px;height:600x;">
+            </div>
+            <br>
+            <p>Microsoft ra mắt Windows 1.0 vào tháng 11 năm 1983. Windows 1.0 đánh dấu sự bắt đầu cho thương hiệu Windows vẫn thống trị thị trường hệ điều hành máy tính ngày nay. Chúng ta hãy cùng nhìn lại sự ra mắt mang tính lịch sử của Microsoft Windows 1.0 sau 40 năm.</p>
+            <h2>Apple Lisa: Phát súng bắt đầu cuộc đua thay đổi hệ điều hành máy tính</h2>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880671623164687037.jpg" style="width:900px;height:600x;" >
+            </div>
+            <p>Steve Jobs bên cạnh chiếc Apple Lisa</p>
+            <p>Vào đầu những năm 1980, hệ điều hành máy tính không hề giống với những gì chúng ta biết hiện nay. Chúng hoạt động dựa trên các dòng lệnh, sử dụng thông qua cách nhập lệnh văn bản. Tuy nhiên, một cuộc cách mạng GUI (giao diện đồ họa người dùng) đang diễn ra trong ngành công nghệ. Apple đã tự đặt mình vào vị trí dẫn đầu trong cuộc cách mạng đó khi cho ra mắt Lisa vào đầu năm 1983. Đó là một trong những chiếc PC đầu tiên có giao diện người dùng đồ họa, cho phép người dùng mở các chương trình và tập tin bằng chuột.</p>
+            <p>Tuy nhiên, vấn đề với Apple Lisa là nó quá cao cấp. Đó là chiếc máy tính đi trước thời đại với thông số kỹ thuật rất cao đối với một chiếc PC đầu những năm 1980. Điều này khiến Lisa trở nên cực kỳ đắt đỏ, với giá khởi điểm xấp xỉ 10.000 USD. Hầu hết người dùng sẽ chọn PC IBM rẻ hơn.</p>
+            <h2>Microsoft ra mắt Windows 1.0 tại COMDEX</h2>
+            <p>Tuy nhiên, Lisa vẫn khiến nhiều người trong ngành công nghệ phải chú ý nhờ hệ điều hành giao diện đồ họa mang tính cách mạng (tiền thân của Macintosh). Để đáp lại Lisa, Microsoft đã bắt đầu dự án hệ điều hành GUI có tên mã là Interface Manager (Trình quản lý giao diện). Bill Gates công bố Windows 1.0 tại khách sạn Plaza ở New York vào ngày 10 tháng 11 năm 1983.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880673217889914177.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Bill Gates công bố dự án hệ điều hành mới</p>
+            <p>Khi Microsoft công bố Windows 1.0, công ty cho biết đây là phần mở rộng của MS-DOS. Microsoft kỳ vọng Windows 1.0 sẽ mở rộng môi trường phát triển phần mềm MS-DOS bằng cách cho phép các nhà phát triển tạo ra nhiều chương trình có điều hướng đồ họa hơn. Do đó, hệ điều hành Windows đầu tiên chỉ giống như một bổ sung cho MS-DOS hơn là một sự thay thế.</p>
+            <p>Microsoft đã trình diễn bản preview Windows 1.0 đầu tiên tại COMDEX (triển lãm thương mại máy tính) vào tháng 11 năm 1983. Thế giới lần đầu tiên nhìn thấy hệ điều hành Windows trên màn hình màu xanh lá cách đây 40 năm. Nền tảng Windows đầu tiên cho phép người dùng truy cập nhiều chương trình đang chạy bằng cách nhấp vào biểu tượng của chúng.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806748721155972762.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Giao diện Windows 1.01</p>
+            <p>Windows 1.0 cũng đi kèm với một số ứng dụng mà người dùng ngày nay đã quen thuộc. Notepad, Paint và Calc (Máy tính) là ba chương trình đi kèm với Windows 1.0 và vẫn là một phần của dòng hệ điều hành Windows kể từ đó. Người dùng cũng có thể chọn các chương trình Write (trình xử lý văn bản), Đồng hồ, Reversi (trò chơi), Clipboard và Lịch từ MS-DOS Executive.</p>
+            <p>Ngày nay, bạn có thể xem Windows 1.0 trông như thế nào trên trang giả lập PC IBM này.</p>
+            <h2>Cuộc cách mạng Windows thật sự bắt đầu vào năm 1995</h2>
+            <p>Microsoft đã trì hoãn việc phát hành Windows 1.0 nhằm thực hiện một số sửa đổi và cải tiến bổ sung. Lịch sử của Windows bắt đầu khi phiên bản Windows 1.0 chính thức đầu tiên xuất hiện vào tháng 11 năm 1985, hai năm sau khi Microsoft công bố nó. Microsoft ra mắt Windows 1.0 tại Mỹ với mức giá phải chăng là 99 USD.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806767101268580880.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Bill Gates cầm những chiếc đĩa mềm Windows 1.0</p>
+            <p>Tuy nhiên, đáng tiếc là người dùng thực sự không ấn tượng bởi Windows 1.0. Hệ điều hành Windows đầu tiên có một số vấn đề về hiệu suất và khả năng tương thích phần mềm. Nhiều đánh giá thời đó nhận xét Windows 1.0 là một sự thất bại. Cuối cùng, hầu hết người dùng thích gắn bó với các lệnh MS-DOS trong suốt những năm còn lại của thập niên 1980.</p>
+            <p>PC của những năm 1980 chưa hoàn toàn sẵn sàng cho hệ điều hành GUI. Hệ điều hành đồ họa yêu cầu sức mạnh nặng nề hơn khiến phần cứng hạn chế của hầu hết PC thời điểm đó gặp vấn đề hiệu năng. Phần cứng PC cần khoảng 7 đến 10 năm để phát triển trước khi cuộc cách mạng Windows thực sự bắt đầu vào năm 1995.</p>
+            <p>Windows cuối cùng đã đạt được thành công lớn vào năm 1995. Việc thêm menu Start và thanh tác vụ vào Windows 95 đã tạo nên sự khác biệt, có thể nói Windows 95 chính là phiên bản đã giúp định hình Windows mà chúng ta biết ngày nay. PC vào giữa những năm 1990 cũng được trang bị tốt hơn nhiều để xử lý nền tảng GUI. Sau đó, dòng hệ điều hành Windows đã thống trị thị trường máy tính để bàn và MS-DOS dần biến mất.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-1700880678825818101052.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Windows 95 mang đến những tính năng cốt lõi được sử dụng đến ngày nay</p>
+            <p>Ngày nay, khó có thể tưởng tượng một hệ điều hành thiếu những yếu tố của Windows 95, ở một mức độ nào đó, chúng ta có thể thấy chúng ngay cả trên các nền tảng cạnh tranh như các bản phân phối dựa trên Linux, macOS và thậm chí cả Android.</p>
+            <h2>Windows đã chiến thắng trong cuộc chiến hệ điều hành đồ họa</h2>
+            <p>Tuy Windows 95 là phiên bản thật sự tạo nên thành công, nhưng sự ra mắt của Windows 1.0 vào tháng 11 năm 1983 chắc chắn là khởi đầu, tạo nền tảng cho những hệ điều hành tốt hơn mà sau này Microsoft mang đến cho PC, giúp chúng trở thành những cỗ máy dễ tiếp cận hơn nhiều.</p>
+            <div class="image-container">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/25/-17008806805711571495043.jpg" style="width:900px;height:600x;">
+            </div>
+            <p>Những đĩa mềm Windows 1.0 đầu tiên có chữ ký của Bill Gates</p>
+            <p>Bill Gates từng tuyên bố Windows là tương lai khi Microsoft trình làng Windows 1.0, hệ điều hành đồ họa đầu tiên của mình và lời tiên tri đó đã trở thành sự thật.</p>
+        </div>
+        <div style="text-align: right;">
+        <a href="javascript:;" style="text-align:end">Theo nhịp sống thị trường</a>
+        </div>
+        <a href="(1)index.html">Quay về trang chủ</a>
+        </div>
+</body>
+</html>
