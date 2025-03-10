@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cú pháp CSS - W3Schools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            background-color: #ffffff;
+        }
+            .topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #04AA6D;
+            overflow: hidden;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .topnav a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+                .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #f1f1f1;
+            padding-top: 50px;
+            position: fixed;
+            overflow-y: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background: #ddd;
+        }
+                .content {
+            margin-left: 270px;
+            margin-top: 60px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .example-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #04AA6D;
+            margin: 20px 0;
+        }
+        .code-box {
+            background: #eeeeee;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            border-left: 4px solid #04AA6D;
+        }
+        .button-test {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .explanation {
+            background-color: #ffffcc;
+            padding: 10px;
+            border-left: 4px solid #ffcc00;
+            margin-top: 15px;
+        }
+        .quiz-container {
+            background-color: #2c3443;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .code {
+            background-color: #1e252f;
+            padding: 8px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: inline-block;
+        }
+        .option {
+            background-color: #3d4553;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .submit-btn {
+            background-color: #00c853;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .video-container img {
+            width: 70%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+        <div class="topnav">
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JAVASCRIPT</a>
+            <a href="#">SQL</a>
+            <a href="#">PYTHON</a>
+            <a href="#">JAVA</a>
+            <a href="#">HOW TO</a>
+            <a href="#">W3.CSS</a>
+            <a href="#">C</a>
+            <a href="#">C++</a>
+            <a href="#">C#</a>
+        </div>
+        
+        <div class="sidebar">
+            <a href="#">CSS Trang Chủ</a>
+            <a href="#">Giới thiệu về CSS</a>
+            <a href="#">Cú pháp CSS</a>
+            <a href="#">Bộ chọn CSS</a>
+            <a href="#">Bình luận CSS</a>
+            <a href="#">CSS làm thế nào để</a>
+            <a href="#">Màu sắc CSS</a>
+            <a href="#">Nền CSS</a>
+            <a href="#">Đường viền CSS</a>
+            <a href="#">Lề CSS</a><a href="#">SQL</a>
+            <a href="#">Đệm CSS</a>
+            <a href="#">Chiều cao / Chiều rộng CSS</a>
+            <a href="#">Phác thảo CSS</a>
+            <a href="#">Văn bản CSS</a>
+            <a href="#">Phông chữ CSS</a>
+        </div>
+        
+        <div class="content">
+            <h1>Cú pháp CSS</h1>
+            <p>Một quy tắc CSS bao gồm một bộ chọn và một khối khai báo.</p>
+            <div class="code-box">
+                h1 { color: blue; font-size: 12px; }
+            </div>
+            <p>Bộ chọn trỏ tới phần tử HTML mà bạn muốn định dạng.</p>
+            <p>Khối khai báo chứa một hoặc nhiều khai báo được phân tách bằng dấu chấm phẩy.</p>
+            <p>Mỗi khai báo bao gồm tên thuộc tính CSS và giá trị, được phân tách bằng dấu hai chấm.</p>
+            <p>Nhiều khai báo CSS được phân tách bằng dấu chấm phẩy và các khối khai báo được bao quanh bởi dấu ngoặc nhọn.</p>
+        
+        <div class="example-box">
+            <h2>Ví dụ</h2>
+            <p>Trong ví dụ này, tất cả các phần tử <code>&lt;p&gt;</code> sẽ được căn giữa và có màu chữ đỏ:</p>
+            <div class="code-box">
+                p { <br>
+                &nbsp;&nbsp;color: red;<br>
+                &nbsp;&nbsp;text-align: center;<br>
+                }
+            </div>
+            <a href="#" class="button-test">Hãy tự mình thử »</a>
+        </div>
+        
+        <h2>Ví dụ giải thích</h2>
+        <ul>
+            <li><code>p</code> là một bộ chọn trong CSS (nó trỏ đến phần tử HTML mà bạn muốn định dạng: <code>&lt;p&gt;</code>).</li>
+            <li><code>color</code> là một thuộc tính, và <code>red</code> là giá trị thuộc tính.</li>
+            <li><code>text-align</code> là một thuộc tính, và <code>center</code> là giá trị thuộc tính.</li>
+        </ul>
+        
+        <div class="explanation">
+            Bạn sẽ tìm hiểu thêm về bộ chọn CSS và thuộc tính CSS trong các chương tiếp theo!
+        </div>
+        <div class="quiz-container">
+            <h2>Bài tập</h2>
+            <p class="question">Trong ví dụ sau, phần nào là bộ chọn?</p>
+            <p class="code">p { color: red; }</p>
+        
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="answer" value="p"> p
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="code"> { color: red; }
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="color"> color
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="red"> red
+                </label>
+            </div>
+            <button class="submit-btn">Gửi câu trả lời »</button>
+    </div>
+    <div class="video-container">
+        <h2>Video: Cú pháp CSS</h2>
+        <img src="https://www.w3schools.com/css/images/css_syntax.webp">
+        <a href="(1)index.html">Quay về trang chủ</a>
+</body>
+</html>
