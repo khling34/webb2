@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>W3Schools Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #09b777;
+            border-radius: 5px; 
+        }
+        .navbar-container {
+            position: relative;
+            overflow: hidden; 
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1050;
+        }
+        .active {
+            background-color: #09b777;
+            border-radius: 5px;
+            color:white;
+        }
+        .sidebar {
+            top:50px;
+            width: 250px;
+            background: #f8f8f8;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 2px solid #ddd;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+        }
+        .scroll-left {
+            left: 0;
+        }
+        .scroll-right {
+            right: 0;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .scroll-btn {
+                display: block;
+            }
+        }
+        .sidebar a {
+            display: block;
+            padding: 5px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+            border-radius: 0.5px;
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            width:1000px;
+            margin-top: 20px;
+            margin-bottom: 20px
+        }
+        .nav-btn {
+            display:inline-block;
+            padding: 10px 20px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            justify-content: space-between;
+        }
+        .nav-btn:hover {
+            background-color: #037f54;
+        }
+        p{
+            font-family: Verdana, sans-serif;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .menu-toggle {
+            position: fixed;
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            color:white
+        }
+        .overlay {
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 999;
+        }
+        @media (max-width: 768px) {
+            @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .content {
+                margin: 15px;
+                width: 100%;
+            }
+            }
+        }   
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+        .example-box {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .code-box {
+            background-color: #fff;
+            padding: 10px;
+            border-left: 5px solid #04AA6D;
+            font-family: monospace;
+            word-wrap: break-word; 
+            overflow-x: auto;
+            max-width: 100%; 
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .highlight {
+            background-color: #ffebeb;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 8fr 2fr; 
+            gap: 20px;
+            align-items: start;
+            margin-left: 270px; 
+            padding: 20px;
+            max-width: 100vw; 
+            overflow-x: hidden;
+        }
+        .divider {
+            width: 2px;
+            background: rgba(128, 128, 128, 0.3); 
+            height: 100%;
+        }
+        .article-container {
+            width: 90%;
+            max-width: 1300px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+        .home-button {
+            position:fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(16, 160, 134);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }.home-button:hover {
+            background-color:#00CED1;}
+           .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: white;
+            margin: 0 1px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .footer i {
+            margin: 0 1px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+        .footer i:hover {
+            opacity:0.3;
+        }
+        .special-link {
+            color: green;
+            text-decoration: underline;
+        }
+        .special-link:hover {
+            color:SlateBlue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="(1)index.html" class="home-button">Trang Chủ</a>
+    <div class="navbar-container">
+        <button class="scroll-btn scroll-left" onclick="scrollNavbar(-100)">&#9664;</button>
+        <div class="navbar" id="navbar">
+            <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+            <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+            <a href="#" class="active">HTML</a>        <a href="#">CSS</a>      <a href="#">JAVASCRIPT</a>  <a href="#">SQL</a>
+            <a href="#">PYTHON</a>      <a href="#">JAVA</a>                    <a href="#">PHP</a>         <a href="#">HOW TO</a>
+            <a href="#">W3.CSS</a>      <a href="#">C</a>                       <a href="#">C++</a>         <a href="#">C#</a>
+            <a href="#">BOOTSTRAP</a>      <a href="#">REACT</a>                <a href="#">MYSQL</a>       <a href="#">JQUERY</a>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollNavbar(100)">&#9654;</button>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <a href="#" class="active">CSS HOME</a>         <a href="#">CSS Introduction</a>    <a href="#">CSS Syntax</a>   <a href="#">CSS Selectors</a>
+        <a href="#">CSS Comments</a>         <a href="#">CSS Colors</a>      <a href="#">CSS Backgrounds</a>      <a href="#">CSS Borders</a>
+        <a href="#">CSS Margins</a>          <a href="#">CSS Padding</a>    <a href="#">CSS Height/Width</a>      <a href="#">CSS Box Model</a>
+        <a href="#">CSS Outline</a>           <a href="#">CSS Text</a>      <a href="#">CSS Fonts</a>           <a href="#">CSS Icons</a>
+        <a href="#">CSS Links</a>        <a href="#">CSS Lists</a>          <a href="#">CSS Tables</a>      <a href="#">CSS Displays</a>
+    </div>
+    <div class="article-container">
+        <div class="content">
+            <h1 style="font-size:50px;font-family: Verdana,sans-serif;">HTML Introduction</h1>
+            <a href="https://www.w3schools.com/default.asp" class="nav-btn">Home</a>
+            <a href="https://www.w3schools.com/html/html_intro.asp" class="nav-btn">Next</a>
+        <hr><p>HTML is the standard markup language for creating Web pages.</p><hr>
+            <h2 style="font-size:30px;font-family:sans-serif;margin-top: 10px;">What is HTML? </h2>
+            <li>HTML stands for Hyper Text Markup Language</li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+            <h3 style="font-size:30px;font-family:sans-serif;margin-top: 10px;">A Simple HTML Document</h3>       
+            <div class="container">
+                <h2 style="font-size:30px;font-family:sans-serif;margin-top: 10px;">Example</h2>
+                <p>In this example all <code>&lt;p&gt;</code> elements will be center-aligned, with a red text color:</p>
+                <div class="example-box">
+                    <div class="code-box">
+                        <html>
+                        <head>
+                        <title>Page Title</title>
+                        </head>
+                        <body>
+                        
+                        <h1>My First Heading</h1>
+                        <p>My first paragraph.</p>
+                    </div>
+                    <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" class="btn">Try it Yourself »</a>
+                </div>
+                </div>
+            <p>Note: Some HTML elements have no content (like the <br> element). These elements are called empty elements. Empty elements do not have an end tag!</p>
+            <p><span class="highlight">color</span> is a property, and <span class="highlight">red</span> is the property value.</p>
+            <p><span class="highlight">text-align</span> is a property, and <span class="highlight">center</span> is the property value.</p>
+            <p style="background-color: #ffffcc; padding: 10px;margin-top: 25px;">You will learn much more about CSS selectors and CSS properties in the next chapters!</p>
+        </div>
+    </div>
+    <script>
+       function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            let overlay = document.getElementById('overlay');
+            
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('active');
+                overlay.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
+            }
+        }
+        window.addEventListener('resize', function() {
+            let sidebar = document.getElementById('sidebar');
+            let overlay = document.getElementById('overlay');
+            
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('active');
+                overlay.style.display = 'none';
+            }
+        });
+        function scrollNavbar(distance) {
+            document.getElementById('navbar').scrollBy({ left: distance, behavior: 'smooth' });
+        }
+        document.addEventListener('click', function (event) {
+        let sidebar = document.getElementById('sidebar');
+        let menuToggle = document.querySelector('.menu-toggle');
+
+        if (sidebar.classList.contains('active') &&
+            !sidebar.contains(event.target) &&
+            !menuToggle.contains(event.target)) {
+            sidebar.classList.remove('active');
+            document.getElementById('overlay').style.display = 'none';
+        }
+        });
+    </script>
+      <div class="footer">
+        <p>Contact</p>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+    </div>
+</body>
+</html>
