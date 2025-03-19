@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bão mạng - Flexbox</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      background-color: #e83066;
+      color: white;
+      padding: 30px 20px;
+    }
+    .container h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      border-bottom: 4px solid white;
+      display: inline-block;
+    }
+    .news {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .news-item {
+      background: white;
+      color: black;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex: 1 1 30%;
+      min-width: 280px;
+    }
+    .news-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .news-item p {
+      padding: 15px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bão mạng</h1>
+    <div class="news">
+      <div class="news-item">
+        <img src="https://i.ex-cdn.com/vntravellive.com/files/news/2024/12/06/diem-lai-nhung-bo-phim-han-khong-the-bo-lo-trong-nam-2024-085929.jpg">
+        <p>DRAMA KỊCH TÍNH: nóng hổi vừa thổi vừa ra lò hot nhất 2025 trong tháng 3 do Dispatch khui</p>
+      </div>
+      <div class="news-item">
+        <img src="https://kenh14cdn.com/203336854389633024/2024/3/13/photo-7-17103056629232036103779.png">
+        <p>Jack liên tục bị anh em đấu tố: Một lần có thể trùng hợp nhưng nhiều lần cần nhìn lại chính mình</p>
+      </div>
+      <div class="news-item">
+        <img src="https://cdn2.tuoitre.vn/thumb_w/480/471584752817336320/2025/3/15/phan-no-1742018346389861517667.jpg">
+        <p>Chagee Việt Nam bị tẩy chay vì ứng dụng chứa 'đường lưỡi bò'</p>
+      </div>
+    </div>
+    <a href="(1)index.html">Quay về trang chủ</a>
+  </div>
+</body>
+</html>
+
