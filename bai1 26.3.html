@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        .album-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .album {
+            position: relative;
+            width: 200px;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .album img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .album:hover img {
+            transform: scale(1.1);
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 10px;
+        }
+        .album:hover .overlay {
+            opacity: 1;
+        }
+        .album-title {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .music-player {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h2>Album Hot</h2>
+    <div class="album-container">
+        <div class="album" onclick="showPlayer('song1.mp3')">
+            <img src="https://product.hstatic.net/1000304920/product/tlinh-ai-album-standard_afbf68f2a8de4d70862490a725431ec6.jpeg" alt="tlinh">
+            <div class="overlay"><i class="fas fa-play"></i></div>
+            <div class="album-title">tlinh - AI</div>
+        </div>
+        <div class="album" onclick="showPlayer('song2.mp3')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREFUDTHaE5W-8ZvWr1pAgCrTFrxw4dTT2l1Q&s" alt="FEARLESS">
+            <div class="overlay"><i class="fas fa-play"></i></div>
+            <div class="album-title">Wxrdie - OUTNOWNOW</div>
+        </div>
+        <div class="album" onclick="showPlayer('song5.mp3')">
+            <img src="https://bazaarvietnam.vn/wp-content/uploads/2023/03/Album-moi-cua-MCK.jpg" alt="99%">
+            <div class="overlay"><i class="fas fa-play"></i></div>
+            <div class="album-title">MCK - 99%</div>
+        </div>
+        <div class="album" onclick="showPlayer('song4.mp3')">
+            <img src="https://bazaarvietnam.vn/wp-content/uploads/2024/10/rose-blackpink-ra-mat-album-solo-thang-12.jpg" alt="STARBOY">
+            <div class="overlay"><i class="fas fa-play"></i></div>
+            <div class="album-title">Rose - ROSIE</div>
+        </div>
+        <div class="album" onclick="showPlayer('song5.mp3')">
+            <img src="data:image/jpeg;base64,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" alt="99%">
+            <div class="overlay"><i class="fas fa-play"></i></div>
+            <div class="album-title">Jenny - RUBY</div>
+        </div>
+    </div>
+    <script>
+        function showPlayer(song) {
+            document.getElementById('audioSource').src = song;
+            document.getElementById('audioPlayer').load();
+            document.getElementById('musicPlayer').style.display = 'block';
+        }
+    </script>
+    <a href="(1)index.html">Quay về trang chủ</a>
+</body>
+</html>
