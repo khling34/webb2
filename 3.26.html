@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web em Capy</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: white;
+        }
+
+    
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            width: 80%;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            opacity: 0.5;
+        }
+
+        
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            background: white;
+            color: black;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease-in-out;
+            z-index: 20;
+        }
+
+        .overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .overlay .close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .menu a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding-bottom: 2px;
+        }
+
+        .menu a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            left: 25%;
+            height: 1px;
+            background-color: white;
+        }
+
+        .overlay .menu {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .overlay .menu a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .overlay .menu a:hover {
+            transform: scale(1.2);
+        }
+
+        .search-box {
+            margin-top: 30px;
+            padding: 10px;
+            width: 250px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">K</div>
+        <button class="menu-btn" onclick="openMenu()">☰</button>
+    </header>
+
+    
+    <div class="gallery">
+        <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/hinh-nen-capybara-14-2.jpg" alt="Image 1">
+        <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/hinh-nen-capybara-17-1.jpg" alt="Image 2">
+        <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/hinh-nen-capybara-18.jpg" alt="Image 3">
+        <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/hinh-nen-capybara-24.jpg" alt="Image 4">
+        <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/hinh-nen-capybara-13-2.jpg" alt="Image 5">
+        <img src="https://phongvu.vn/cong-nghe/wp-content/uploads/2024/09/hinh-nen-capybara-15-1.jpg" alt="Image 6">
+    </div>
+
+   
+    <div id="overlay-menu" class="overlay">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Team</a>
+            <a href="#">Services</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">Buy Now!</a>
+            <input type="text" class="search-box" placeholder="Search ...">
+        </nav>
+    </div>
+
+    <script>
+        function openMenu() {
+            document.getElementById("overlay-menu").style.display = "flex";
+        }
+
+        function closeMenu() {
+            document.getElementById("overlay-menu").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
