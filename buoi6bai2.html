@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalium Menu & New Arrivals</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #0b0c10;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: black;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            position: relative;
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            color: #c5c6c7;
+        }
+        nav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            color: rgba(0, 0, 0, 0.148);
+            min-width: 150px;
+            list-style: none;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,1);
+        }
+        .dropdown-menu li {
+            padding: 10px;
+        }
+        .dropdown-menu a {
+            color: black;
+        }
+        .nav-links li:hover .dropdown-menu {
+            display: block;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://www.elleman.vn/app/uploads/2019/01/20/bo-suu-tap-Louis-Vuitton-Thu-Dong-elleman.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .shop-now {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: white;
+            color: black;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .shop-now:hover {
+            background: #c5c6c7;
+        }
+
+        .new-arrivals {
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+            color: black;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .product {
+            text-align: center;
+            position: relative;
+            width: 200px;
+            height: 250px;
+        }
+        .product img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .product img.hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+        }
+        .product:hover img.default-img {
+            opacity: 0;
+        }
+        .product:hover img.hover-img {
+            opacity: 1;
+        }
+        .product p {
+            margin-top: 260px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* New Arrivals */
+        .new-arrivals {
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+            color: black;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .home-button{
+            position:fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(16, 160, 134);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        .home-button:hover {
+            background-color:#00CED1;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo",style="font-family:Times New Roman">Kallium</h1>
+        <ul class="nav-links">
+            <li>
+                <a href="#">Home</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Home Fullscreen</a></li>
+                    <li><a href="#">Home Parallax</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Shop</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Product</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Simple Product</a></li>
+                    <li><a href="#">Variable Product</a></li>
+                    <li><a href="#">External Product</a></li>
+                    <li><a href="#">Grouped Product</a></li>
+                    <li><a href="#">Catalog Mode </a></li>
+                    <li><a href="#">Image Layout</a></li>
+                    <li><a href="#">Image sizes</a></li>
+
+                </ul>
+            </li>
+            <li><a href="#">News</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Sudebar Right</a></li>
+                <li><a href="#">Sudebar Left</a></li>
+            </ul></li>
+            <li><a href="#">Pages</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Checkout</a></li>
+                    <li><a href="#">Login/Register</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Buy Now</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Fall and Winter <br>Coat Collection </h1>
+            <button class="shop-now">SHOP NOW</button>
+        </div>
+    </header>
+
+    <section class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <p>Latest From Our Store</p>
+        <div class="products">
+            <div class="product">
+                <img class="default-img" src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/broken_2-820x1016.jpg" alt="Broken T Shirt">
+                <img class="hover-img" src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/broken_6.jpg" alt="Broken T Shirt">
+                <p><b>Broken T Shirt</b></p>
+            </div>
+            <div class="product">
+                <img class="default-img" src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/knickerboxer_1-820x1016.jpg" alt="Knickerboxer">
+                <img class="hover-img" src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/knickerboxer_7.jpg" alt="Knickerboxer">
+                <p><b>Knickerboxer</b></p>
+            </div>
+            <div class="product">
+                <img class="default-img" src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/studio_belt_3.jpg" alt="Studio Belt">
+                <img class="hover-img" src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/studio_belt_4-820x1016.jpg" alt="Studio Belt">
+                <p><b>Studio Belt</b></p>
+            </div>
+        </div>
+        <a href="index.html" class="home-button">Trang Chủ</a>
+</body>
+</html>
