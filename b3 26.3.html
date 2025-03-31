@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Le Ngoc Bao Han</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #F0FFFF;
+            text-align: center;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 100;
+            color: #2F4F4F;
+        }
+        .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.menu-overlay a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 15px;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.menu-overlay.active a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-overlay.active a:nth-child(1) { transition-delay: 0.1s; }
+.menu-overlay.active a:nth-child(2) { transition-delay: 0.2s; }
+.menu-overlay.active a:nth-child(3) { transition-delay: 0.3s; }
+.menu-overlay.active a:nth-child(4) { transition-delay: 0.4s; }
+.menu-overlay.active a:nth-child(5) { transition-delay: 0.5s; }
+.menu-overlay.active a:nth-child(6) { transition-delay: 0.6s; }
+.menu-overlay.active a:nth-child(7) { transition-delay: 0.7s; }
+        .home-button{
+            position:fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color:lightpink;
+            color: white; 
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        .home-button:hover {
+            transform:scale(1.05);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .gallery img {
+            width: 30%;
+            height: auto;
+            border-radius: 2px;
+        }
+        .item1 { grid-column: span 2; grid-row: span 1; }
+        .item2 { grid-column: span 1; grid-row: span 1; }
+        .item3 { grid-column: span 1; grid-row: span 2; }
+        .item4 { grid-column: span 1; grid-row: span 1; }
+        .item5 { grid-column: span 2; grid-row: span 1; }
+        .item6 { grid-column: span 1; grid-row: span 1; }
+    </style>
+</head>
+<body>
+
+    <div class="menu-btn" onclick="document.querySelector('.menu-overlay').classList.toggle('active')">☰</div>
+    <div class="menu-overlay">
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Team</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <a href="#">Buy Now!</a>
+    </div>
+    <div class="before-after"></div>
+    <div class="gallery">
+        <div class="gallery">
+        <img src="https://images.pexels.com/photos/2437297/pexels-photo-2437297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ảnh 1">
+        <img src="https://images.pexels.com/photos/3049327/pexels-photo-3049327.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ảnh 2">
+        <img src="https://images.pexels.com/photos/3571576/pexels-photo-3571576.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ảnh 3">
+        <img src="https://images.pexels.com/photos/592077/pexels-photo-592077.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ảnh 4">
+        <img src="https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ảnh 5">
+        <img src="https://images.pexels.com/photos/21787/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="Ảnh 6">
+    </div>
+    </div>
+    <a href="(1)index.html" class="home-button">Trang Chủ</a>
+</body>
+</html>
