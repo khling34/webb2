@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số chẵn hay lẻ</title>
+</head>
+<style>
+h2 {
+            color:red;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+</style>
+<body>
+    <h2>Check số chẵn hay lẻ</h2>
+    <label for="inputNumber">Nhập số: </label>
+    <input type="number" id="inputNumber" />
+    <button onclick="checkEvenOdd()">Kiểm tra</button>
+    
+    <p id="result"></p>
+    <a href="(1)index.html">Quay về trang chủ</a>
+    <script>
+            let number = document.getElementById("inputNumber").value;
+            if (number % 2 === 0) {
+                document.getElementById("result").innerText = `${number} là số chẵn.`;
+            } else {
+                document.getElementById("result").innerText = `${number} là số lẻ.`;
+            }
+        }
+    </script>
+
+</body>
+</html>
