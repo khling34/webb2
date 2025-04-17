@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đổi màu bằng JavaScript</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #text {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: rgb(177, 115, 163);
+      border: 1px solid #ccc;
+      cursor: pointer;
+      margin: 0 5px;
+      font-size: 16px;
+    }
+
+    h3, p {
+      text-align: center;
+    }
+    .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div id="text">Đổi màu tôi đi</div>
+
+  <button onclick="changeToBlue()">xanh</button>
+
+  <button onclick="resetColor()">quay lại màu cũ</button>
+</div>
+<section id="trangchu" class="fade-in">
+    <div class="container">
+        <b><a href="(1)index.html" class="back-home">Quay về trang chủ</a></b>
+    </div>
+</section>
+<script>
+  const originalColor = document.body.style.backgroundColor || "white";
+
+  function changeToBlue() {
+    document.body.style.backgroundColor = "lightblue";
+  }
+
+  function resetColor() {
+    document.body.style.backgroundColor = originalColor;
+  }
+</script>
+
+</body>
+</html>

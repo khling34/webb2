@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Phép tính DOM</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fdfdfd;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: #fff;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    h4, h3, p {
+      margin-bottom: 10px;
+    }
+
+    .operation {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    input[type="number"],
+    input[readonly] {
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .symbol {
+      margin: 0 5px;
+    }
+
+    button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #history {
+      margin-top: 20px;
+    }
+
+    .history-item {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .active {
+      color: red;
+      font-weight: bold;
+    }
+    .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: lightgrey;
+        }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h3>các phép toán</h3>
+
+  <div class="operation">
+    phép cộng
+    <input type="number" id="add1" value="3">
+    <span class="symbol">+</span>
+    <input type="number" id="add2" value="3">
+    <span class="symbol">=</span>
+    <input type="text" id="resultAdd" readonly>
+    <button onclick="calculate('add')">=</button>
+  </div>
+
+  <div class="operation">
+    phép trừ
+    <input type="number" id="sub1" value="3">
+    <span class="symbol">-</span>
+    <input type="number" id="sub2" value="3">
+    <span class="symbol">=</span>
+    <input type="text" id="resultSub" readonly>
+    <button onclick="calculate('sub')">=</button>
+  </div>
+
+  <div class="operation">
+    phép nhân
+    <input type="number" id="mul1" value="2">
+    <span class="symbol">*</span>
+    <input type="number" id="mul2" value="2">
+    <span class="symbol">=</span>
+    <input type="text" id="resultMul" readonly>
+    <button onclick="calculate('mul')">=</button>
+  </div>
+
+  <div class="operation">
+    phép chia
+    <input type="number" id="div1" value="3">
+    <span class="symbol">/</span>
+    <input type="number" id="div2" value="3">
+    <span class="symbol">=</span>
+    <input type="text" id="resultDiv" readonly>
+    <button onclick="calculate('div')">=</button>
+  </div>
+
+  <h3>Các phép toán vừa thực hiện</h3>
+  <div id="history">
+    <div id="hisAdd" class="history-item">PHÉP CỘNG<br></div>
+    <div id="hisSub" class="history-item">PHÉP TRỪ<br></div>
+    <div id="hisMul" class="history-item">PHÉP NHÂN<br></div>
+    <div id="hisDiv" class="history-item">PHÉP CHIA<br></div>
+  </div>
+
+</div>
+<section id="trangchu" class="fade-in">
+    <div class="container">
+        <b><a href="(1)index.html" class="back-home">Quay về trang chủ</a></b>
+    </div>
+</section>
+<script>
+  function clearHighlight() {
+    document.getElementById("hisAdd").classList.remove("active");
+    document.getElementById("hisSub").classList.remove("active");
+    document.getElementById("hisMul").classList.remove("active");
+    document.getElementById("hisDiv").classList.remove("active");
+  }
+
+  function calculate(type) {
+    clearHighlight();
+    let a, b, result, text = "";
+    switch (type) {
+      case 'add':
+        a = parseFloat(document.getElementById("add1").value);
+        b = parseFloat(document.getElementById("add2").value);
+        result = a + b;
+        document.getElementById("resultAdd").value = result;
+        text = `${a}+${b}=${result}`;
+        document.getElementById("hisAdd").innerHTML = `PHÉP CỘNG<br>${text}`;
+        document.getElementById("hisAdd").classList.add("active");
+        break;
+      case 'sub':
+        a = parseFloat(document.getElementById("sub1").value);
+        b = parseFloat(document.getElementById("sub2").value);
+        result = a - b;
+        document.getElementById("resultSub").value = result;
+        text = `${a}-${b}=${result}`;
+        document.getElementById("hisSub").innerHTML = `PHÉP TRỪ<br>${text}`;
+        document.getElementById("hisSub").classList.add("active");
+        break;
+      case 'mul':
+        a = parseFloat(document.getElementById("mul1").value);
+        b = parseFloat(document.getElementById("mul2").value);
+        result = a * b;
+        document.getElementById("resultMul").value = result;
+        text = `${a}*${b}=${result}`;
+        document.getElementById("hisMul").innerHTML = `PHÉP NHÂN<br>${text}`;
+        document.getElementById("hisMul").classList.add("active");
+        break;
+      case 'div':
+        a = parseFloat(document.getElementById("div1").value);
+        b = parseFloat(document.getElementById("div2").value);
+        result = b !== 0 ? (a / b) : "Lỗi";
+        document.getElementById("resultDiv").value = result;
+        text = b !== 0 ? `${a}/${b}=${result}` : "Không thể chia cho 0";
+        document.getElementById("hisDiv").innerHTML = `PHÉP CHIA<br>${text}`;
+        document.getElementById("hisDiv").classList.add("active");
+        break;
+    }
+  }
+</script>
+
+</body>
+</html>

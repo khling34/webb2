@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Đăng Ký</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-box {
+      background-color: #fff;
+      padding: 30px;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      width: 420px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #d36ba9;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 75%;
+      padding: 6px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .dob input {
+      width: 30%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .gender, .hobbies {
+      margin-top: 5px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #a57692;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #bb7b9f;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <form id="registerForm" onsubmit="return validateForm()">
+      <h2>FORM ĐĂNG KÝ</h2>
+
+      <label>Họ:
+        <input type="text" id="lastName">
+      </label>
+
+      <label>Tên:
+        <input type="text" id="firstName">
+      </label>
+
+      <label>Ngày sinh:</label>
+      <div class="dob">
+        <input type="number" id="day" min="1" max="31" placeholder="Ngày">
+        <input type="number" id="month" min="1" max="12" placeholder="Tháng">
+        <input type="number" id="year" min="1900" max="2100" placeholder="Năm">
+      </div>
+
+      <label>Giới tính:</label>
+      <div class="gender">
+        <input type="radio" name="gender" value="Nam"> Nam
+        <input type="radio" name="gender" value="Nữ"> Nữ
+      </div>
+
+      <label>Số điện thoại:
+        <input type="text" id="phone">
+      </label>
+
+      <label>Sở thích:</label>
+      <div class="hobbies">
+        <input type="checkbox"> Đọc sách
+        <input type="checkbox"> Xem phim
+        <input type="checkbox"> Nghe nhạc
+        <input type="checkbox"> Đá bóng
+      </div>
+
+      <label>Khác:
+        <textarea rows="3" cols="30"></textarea>
+      </label>
+
+      <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+
+      <div class="error" id="errorMessage"></div>
+    </form>
+  </div>
+  <a href="(1)index.html">Quay về trang chủ</a>
+  <script>
+    function validateForm() {
+      const lastName = document.getElementById("lastName").value.trim();
+      const firstName = document.getElementById("firstName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const day = parseInt(document.getElementById("day").value);
+      const month = parseInt(document.getElementById("month").value);
+      const year = parseInt(document.getElementById("year").value);
+      const errorMessage = document.getElementById("errorMessage");
+
+      if (!lastName || !firstName || !phone) {
+        errorMessage.innerText = "Vui lòng nhập đầy đủ họ, tên và số điện thoại.";
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(phone)) {
+        errorMessage.innerText = "Số điện thoại phải gồm 10 chữ số.";
+        return false;
+      }
+
+      if (isNaN(day) || isNaN(month) || isNaN(year)) {
+        errorMessage.innerText = "Vui lòng nhập đầy đủ ngày, tháng, năm sinh.";
+        return false;
+      }
+
+      if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2100) {
+        errorMessage.innerText = "Ngày sinh không hợp lệ.";
+        return false;
+      }
+
+      errorMessage.innerText = "";
+      alert("Đăng ký thành công!");
+      return true;
+    }
+  </script>
+</body>
+</html>
