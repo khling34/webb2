@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu </title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+    .menu {
+      width: 200px;
+    }
+    .menu-button {
+      background-color: #0077b6;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+    .submenu {
+      display: none;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .submenu div {
+      padding: 12px 16px;
+      font-size: 18px;
+      color: #333;
+      border-bottom: 1px solid #e0e0e0;
+      cursor: pointer;
+    }
+    .submenu div:last-child {
+      border-bottom: none;
+    }
+    .submenu div:hover {
+      background-color: #eee;
+    }
+    .back-home {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #5990bd;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .back-home:hover {
+      background-color: #3498db;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="menu">
+  <button class="menu-button" onclick="toggleMenu()">Thiết kế web</button>
+  <div class="submenu" id="submenu">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>Javascript</div>
+  </div>
+</div>
+<br>
+<a href="(1)index.html">Quay về trang chủ</a>
+<script>
+  function toggleMenu() {
+    const submenu = document.getElementById('submenu');
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>

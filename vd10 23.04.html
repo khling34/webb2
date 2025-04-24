@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Nodes Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      div {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      button {
+        padding: 5px 10px;
+        background-color: #ca509b;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #c24090;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="(1)index.html">back</a>
+    <div>
+      <p id="p1">p1. This is a paragraph.</p>
+      <p id="p2">p2. This is another paragraph.</p>
+      <button onclick="remove_node1('p1')">remove node</button>
+    </div>
+    <div id="container">
+      <p id="p3">p1. This is p3 paragraph.</p>
+      <p id="p4">p2. This is p4 paragraph.</p>
+      <button onclick="remove_node2('container', 'p4')">remove node</button>
+    </div>
+
+    <script>
+      function remove_node1(x) {
+        var elmnt = document.getElementById(x);
+        elmnt.remove();
+      }
+
+      function remove_node2(x, y) {
+        var cha = document.getElementById(x);
+        var con = document.getElementById(y);
+        cha.removeChild(con);
+      }
+    </script>
+  </body>
+</html>

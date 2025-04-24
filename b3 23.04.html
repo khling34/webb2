@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hồ Sơ & Bài Tập Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ * {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background: #fdeff4cc; /* hồng nhạt */
+  color: #333;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #e91e63; /* hồng đậm */
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #ee7da3; /* hồng nhạt hover */
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+  flex: 1;
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile img {
+  max-width: 100px;
+  border-radius: 50%;
+  border: 3px solid #e95989; /* hồng đậm */
+}
+
+.profile h1 {
+  margin: 10px 0 0;
+  color: #e26e99;
+}
+
+.exercise-list li {
+  margin: 5px 0;
+}
+
+.exercise-list a {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+.exercise-list a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f8f8;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    position: static;
+    padding: 0;
+    overflow-x: auto;
+  }
+
+  nav a {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <nav>
+    <a href="#profile">Hồ sơ</a>
+    <a href="#buoi1">Buổi 1</a>
+    <a href="#buoi2">Buổi 2</a>
+    <a href="#buoi3">Buổi 3</a>
+    <a href="#buoi4">Buổi 4</a>
+    <a href="#buoi5">Buổi 5</a>
+    <a href="#buoi6">Buổi 6</a>
+    <a href="#buoi7">Buổi 7</a>
+    <a href="#buoi8">Buổi 8</a>
+    <a href="#buoi9">Buổi 9</a>
+  </nav>
+
+  <div class="main-content">
+    <div id="profile" class="section profile">
+      <img src="https://github.com/user-attachments/assets/de7cac3b-12ba-4cf8-a900-f11ed588a506" alt="Ảnh đại diện">
+      <h1>Khánh Linh</h1>
+      <p class="job-title">Sinh viên CNTT D2024B</p>
+      <p><strong>Ngày sinh:</strong> 03/04/2006</p>
+      <p><strong>Địa chỉ:</strong> Hà Nội</p>
+      <p><strong>Email:</strong> rnbilinhh@gmail.com</p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/linh0nguu">linh0nguu</a></p>
+      <p><strong>Trường:</strong> Đại học Thủ Đô Hà Nội</p>
+      <p><strong>Khoa:</strong> Toán - Công nghệ thông tin</p>
+      <p><strong>Định hướng:</strong> Trở thành lập trình viên web</p>
+    </div>
+
+    <!-- Danh sách buổi học -->
+    <div id="buoi1" class="section">
+      <h2>Buổi 1</h2>
+      <ul class="exercise-list">
+        <li><a href="baitap1.html.html">Bài 1</a></li>
+        <li><a href="baitap21.html.html">Bài 2.1</a></li>
+        <li><a href="baitap22.html.html">Bài 2.2</a></li>
+        <li><a href="baitap23.html.html">Bài 2.3</a></li>
+        <li><a href="baitap3.html.html">Bài 3</a></li>
+        <li><a href="baitap4.html.html">Bài 4</a></li>
+      </ul>
+    </div>
+
+    <!-- Lặp lại cho các buổi khác -->
+    <div id="buoi2" class="section">
+      <h2>Buổi 2</h2>
+      <ul class="exercise-list">
+        <li><a href="Testlab1.html">Bài 1</a></li>   
+        <li><a href="bai2.1.html">Bài 2.1</a></li>
+        <li><a href="bai2.2.html">Bài 2.2</a></li>
+        <li><a href="bai2.3.html">Bài 2.3</a></li>
+        <li><a href="bai3.html">Bài 3</a></li>
+      </ul>
+    </div>
+    <footer>
+        <div id="buoi3" class="section">
+            <h2>Buổi 3</h2>
+            <ul class="exercise-list">
+              <li><a href="Testlab1.html">Bài 1</a></li>   
+              <li><a href="bai2.1.html">Bài 2.1</a></li>
+              <li><a href="bai2.2.html">Bài 2.2</a></li>
+              <li><a href="bai2.3.html">Bài 2.3</a></li>
+              <li><a href="bai3.html">Bài 3</a></li>
+            </ul>
+          </div>
+          <div id="buoi4" class="section">
+            <h2>Buổi 4</h2>
+            <ul class="exercise-list">
+              <li><a href="Testlab1.html">Bài 1</a></li>   
+              <li><a href="bai2.1.html">Bài 2.1</a></li>
+              <li><a href="bai2.2.html">Bài 2.2</a></li>
+              <li><a href="bai2.3.html">Bài 2.3</a></li>
+              <li><a href="bai3.html">Bài 3</a></li>
+            </ul>
+          </div>
+          <div id="buoi5" class="section">
+            <h2>Buổi 5</h2>
+            <ul class="exercise-list">
+              <li><a href="Testlab1.html">Bài 1</a></li>   
+              <li><a href="bai2.1.html">Bài 2.1</a></li>
+              <li><a href="bai2.2.html">Bài 2.2</a></li>
+              <li><a href="bai2.3.html">Bài 2.3</a></li>
+              <li><a href="bai3.html">Bài 3</a></li>
+            </ul>
+          </div>
+          <div id="buoi6" class="section">
+            <h2>Buổi 6</h2>
+            <ul class="exercise-list">
+              <li><a href="Testlab1.html">Bài 1</a></li>   
+              <li><a href="bai2.1.html">Bài 2.1</a></li>
+              <li><a href="bai2.2.html">Bài 2.2</a></li>
+              <li><a href="bai2.3.html">Bài 2.3</a></li>
+              <li><a href="bai3.html">Bài 3</a></li>
+            </ul>
+          </div>
+          <div id="buoi7" class="section">
+            <h2>Buổi 7</h2>
+            <ul class="exercise-list">
+              <li><a href="Testlab1.html">Bài 1</a></li>   
+              <li><a href="bai2.1.html">Bài 2.1</a></li>
+              <li><a href="bai2.2.html">Bài 2.2</a></li>
+              <li><a href="bai2.3.html">Bài 2.3</a></li>
+              <li><a href="bai3.html">Bài 3</a></li>
+            </ul>
+          </div>
+          <div id="buoi8" class="section">
+            <h2>Buổi 8</h2>
+            <ul class="exercise-list">
+              <li><a href="Testlab1.html">Bài 1</a></li>   
+              <li><a href="bai2.1.html">Bài 2.1</a></li>
+              <li><a href="bai2.2.html">Bài 2.2</a></li>
+              <li><a href="bai2.3.html">Bài 2.3</a></li>
+              <li><a href="bai3.html">Bài 3</a></li>
+            </ul>
+          </div>
+          <div id="buoi9" class="section">
+            <h2>Buổi 9</h2>
+            <ul class="exercise-list">
+              <li><a href="Testlab1.html">Bài 1</a></li>   
+              <li><a href="bai2.1.html">Bài 2.1</a></li>
+              <li><a href="bai2.2.html">Bài 2.2</a></li>
+              <li><a href="bai2.3.html">Bài 2.3</a></li>
+              <li><a href="bai3.html">Bài 3</a></li>
+            </ul>
+          </div>
+          <a href="(1)index.html">Quay về trang chủ</a>
+      Bài Tập Web | <a href="https://www.facebook.com/khlig">Khánh Linh</a>
+    </footer>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #navbar {
+        overflow: hidden;
+        background-color:rgb(209, 143, 182);
+        padding: 90px 10px;
+        transition: 0.4s;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 99;
+      }
+
+      #navbar a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      #navbar #logo {
+        font-size: 35px;
+        font-weight: bold;
+        transition: 0.4s;
+      }
+
+      #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      #navbar a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      #navbar-right {
+        float: right;
+      }
+
+      @media screen and (max-width: 580px) {
+        #navbar {
+          padding: 20px 10px !important;
+        }
+        #navbar a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        #navbar-right {
+          float: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="#default" id="logo">CompanyLogo</a>
+      <div id="navbar-right">
+        <a class="active" href="#home">Home</a>
+        <a href="(1)index.html">quay về trang chủ</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 210px; padding: 15px 15px 2500px; font-size: 30px">
+      <p>
+        <b
+          >This example demonstrates how to shrink a navigation bar when the
+          user starts to scroll the page.</b
+        >
+      </p>
+      <p>
+        Cách hiểu thứ nhất (đoạn ý): Đoạn văn được dùng với ý nghĩa để chỉ sự
+        phân đoạn nội dung, phân đoạn ý của văn bản. Một văn bản bao gồm nhiều
+        đoạn văn: Đoạn mở đầu văn bản, những đoạn khai triển văn bản, đoạn kết
+        thúc văn bản. Mỗi đoạn phải có sự hoàn chỉnh nhất định nào đó về mặt ý,
+        về mặt nội dung. Nhưng thế nào là một nội dung, một ý hoàn chỉnh thì
+        không có tiêu chí để xác định rõ ràng. Một văn bản, tuỳ theo người đọc
+        cảm nhận mà phân chia ra thành các đoạn, sự phân chia có thể không thống
+        nhất giữa những người đọc: có người chia theo ý lớn, có người chia theo
+        ý nhỏ. Ý lớn là đoạn bài có hai hoặc ba ý nhỏ được khai triển từ ý lớn,
+        bao gồm hai hoặc ba đoạn văn ngắn, mỗi đoạn ngắn đó là một ý nhỏ, các
+        đoạn này hợp ý với nhau thành một ý lớn; ý nhỏ là ý được khai triển từ ý
+        lớn, về mặt nội dung chỉ triển khai theo một phương diện, một hướng cụ
+        thể, mỗi ý nhỏ là một đoạn.
+      </p>
+      <p>
+        Về mặt nội dung: đoạn văn là một ý hoàn chỉnh ở một mức độ nhất định nào
+        đó về logic ngữ nghĩa, có thể nắm bắt được một cách tương đối dễ dàng.
+        Mỗi đoạn văn trong văn bản diễn đạt một ý, các ý có mối liên quan chặt
+        chẽ với nhau trên cơ sở chung là chủ đề của văn bản. Mỗi đoạn trong văn
+        bản có một vai trò chức năng riêng và được sắp xếp theo một trật tự nhất
+        định: đoạn mở đầu văn bản, các đoạn thân bài của văn bản (các đoạn này
+        triển khai chủ đề của văn bản thành các khía cạch khác nhau), đoạn kết
+        thúc văn bản. Mỗi đoạn văn bản khi tách ra vẫn có tính độc lập tương đối
+        của nó: nội dung của đoạn tương đối hoàn chỉnh, hình thức của đoạn có
+        một kết cấu nhất định.Về mặt hình thức: đoạn văn luôn luôn hoàn chỉnh.
+        Sự hoàn chỉnh đó thể hiện ở những điểm sau: mỗi đoạn văn bao gồm một số
+        câu văn nằm giữa hai dấu chấm xuống dòng, có liên kết với nhau về mặt
+        hình thức, thể hiện bằng các phép liên kết; mỗi đoạn văn khi mở đầu, chữ
+        cái đầu đoạn bao giờ cũng được viết hoa và viết lùi vào so với các dòng
+        chữ khác trong đoạn.
+      </p>
+      <p>
+        <b>Note:</b> We have also made the navbar responsive, resize the browser
+        window to see the effect.
+      </p>
+      <p>
+        “Vì ông lão yêu làng tha thiết nên vô cùng căm uất khi nghe tin dân làng
+        theo giặc(1). Hai tình cảm tưởng chừng mâu thuẫn ấy đã dẫn đến một sự
+        xung đột nội tâm dữ dội( 2). Ông Hai dứt khoát lựa chọn theo cách của
+        ông: Làng thì yêu thật, nhưng làng theo Tây mất rồi thì phải thù( 3).
+        Đây là một nét mới trong tình cảm của người nông dân thời kì đánh
+        Pháp(4). Tình cảm yêu nước rộng lớn hơn đã bao trùm lên tình cảm đối với
+        làng quê(5). Dù đã xác định như thế, nhưng ông Hai vẫn không thể dứt bỏ
+        tình yêu đối với quê hương; vì thế mà ông xót xa cay đắng”(6).
+      </p>
+    </div>
+
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("navbar").style.padding = "30px 10px";
+          document.getElementById("logo").style.fontSize = "25px";
+        } else {
+          document.getElementById("navbar").style.padding = "80px 10px";
+          document.getElementById("logo").style.fontSize = "35px";
+        }
+      }
+    </script>
+  </body>
+</html>

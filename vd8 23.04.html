@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a href="(1)index.html">back</a>
+    <div id="container">
+      <p id="p1">huhuihuihuhihuhi</p>
+      <p id="p2">meo meo meo</p>
+    </div>
+    <button onclick="addnode()">add node</button>
+    <script>
+      function addnode() {
+        var x = document.createElement("p");
+        x.className = "p3";
+        x.innerText = "the new one";
+        var cha = document.getElementById("container");
+        var y = document.getElementById("p2");
+        // chèn phần tử x trước thẻ p vào container cha đặt trước thành phần y
+        cha.insertBefore(x, y);
+      }
+    </script>
+  </body>
+</html>

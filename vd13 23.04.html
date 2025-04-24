@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scroll Test</title>
+  </head>
+  <body>
+    <div style="height: 2000px">Cuộn xuống để xem console.log</div>
+    <a href="(1)index.html">back</a>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Đã load xong");
+
+        window.addEventListener("scroll", function () {
+          console.log("đang cuộn chuột");
+          console.log(window.pageYOffset); // in ra vị trí dọc của chuột
+
+          if (window.pageYOffset > 500) {
+            console.log("đến phần sidebar");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

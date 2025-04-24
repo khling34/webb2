@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a href="(1)index.html">back</a>
+    <div id="container">
+      <p id="p1">gvgjuuuvjj</p>
+      <p id="p2">hahahahahahhh</p>
+    </div>
+    <button onclick="changenode()">change node</button>
+    <script>
+      function changenode() {
+        var node = document.createElement("div");
+        node.innerText = "The new one";
+        var x = document.getElementById("container");
+        var y = document.getElementById("p2");
+        x.replaceChild(node, y);
+      }
+    </script>
+  </body>
+</html>
